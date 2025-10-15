@@ -1,0 +1,18 @@
+html {
+  /* Establece el comportamiento de scroll en caso de que el contenido sea demasiado grande */
+  overflow: auto;
+  /* Permite que la página ocupe el ancho completo */
+  width: 100%;
+}
+
+/* Estilos para el elemento body */
+body {
+  /* Elimina los márgenes por defecto que el navegador puede aplicar */
+  margin: 0;
+  /* Establece un tamaño de fuente base para toda la página */
+  font-family: Arial, sans-serif;
+  /* Establece un color de fondo general */
+  background-color: #0ddb40;
+  /* Establece el color del texto por defecto */
+  color: #333;
+}
