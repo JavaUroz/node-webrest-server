@@ -67,10 +67,12 @@ export class TodosController {
 
         if(!todo) return res.status(404).json({ error: `TODO with id: ${id} not found` });
 
-        const deletedTodo = await prisma.todo.delete({
+        const deleted = await prisma.todo.delete({
             where :{ id }
-        })
+        });
 
-        res.json(deletedTodo);
+        (deleted)
+            ? res.json(deleted)
+            : res.status(400).json({ error: `TODO with id: ${id} has not been deleted` });
     };
 }
