@@ -48,7 +48,10 @@ export class TodosController {
         
         const updateTodo = prisma.todo.update({
             where: { id },
-            data: { text, completedAt }
+            data: { 
+                text,
+                completedAt: (completedAt) ? new Date(completedAt) : null
+            }
         });
 
         res.json(updateTodo);
