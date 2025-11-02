@@ -9,7 +9,7 @@ export class UpdateTodoDTO {
         const returnObj: Record<string, any> = {};
 
         if(this.text) returnObj.text = this.text;
-        if(this.completedAt) returnObj.CompletedAt = this.completedAt;
+        if(this.completedAt) returnObj.completedAt = this.completedAt;
 
         return returnObj;
     }
